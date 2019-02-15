@@ -42,36 +42,42 @@ class Login_PageState extends State<StatefulWidget> {
                       size: 30,
                     )),
               ),
-              TextFormField(
-                style: TextStyle(fontSize: 18, color: Colors.grey),
-                controller: password,
-                obscureText: true,
-                decoration: InputDecoration(
-                    hintText: 'Password',
-                    prefixIcon: Icon(
-                      Icons.lock,
-                      size: 30,
-                    )),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: TextFormField(
+                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                  controller: password,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      hintText: 'Password',
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        size: 30,
+                      )),
+                ),
               ),
-              RaisedButton(
-                child: Text('LOGIN'),
-                onPressed: () {
-                  if (userid.text.isEmpty || password.text.isEmpty) {
-                    final snackBar = SnackBar(
-                      content: Text('กรุณาระบุ user or password'),
-                    );
-                    _scaffoldKey.currentState.showSnackBar(snackBar);
-                  } else if (userid.text == 'admin' &&
-                      password.text == 'admin') {
-                    final snackBar = SnackBar(
-                      content: Text('user or password ไม่ถูกต้อง'),
-                    );
-                    _scaffoldKey.currentState.showSnackBar(snackBar);
-                  } else {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Home_Page()));
-                  }
-                },
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: RaisedButton(
+                  child: Text('LOGIN'),
+                  onPressed: () {
+                    if (userid.text.isEmpty || password.text.isEmpty) {
+                      final snackBar = SnackBar(
+                        content: Text('กรุณาระบุ user or password'),
+                      );
+                      _scaffoldKey.currentState.showSnackBar(snackBar);
+                    } else if (userid.text == 'admin' &&
+                        password.text == 'admin') {
+                      final snackBar = SnackBar(
+                        content: Text('user or password ไม่ถูกต้อง'),
+                      );
+                      _scaffoldKey.currentState.showSnackBar(snackBar);
+                    } else {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Home_Page()));
+                    }
+                  },
+                ),
               ),
               Align(
                   alignment: Alignment.topRight,
