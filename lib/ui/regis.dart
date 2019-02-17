@@ -44,7 +44,7 @@ class Regis_PageState extends State<StatefulWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
                 child: TextFormField(
                   controller: password,
                   obscureText: true,
@@ -58,20 +58,17 @@ class Regis_PageState extends State<StatefulWidget> {
                       hintStyle: TextStyle(color: Colors.blue)),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: TextFormField(
-                  controller: repassword,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      hintText: 'Re-Password',
-                      prefixIcon: Icon(
-                        Icons.lock,
-                        size: 20,
-                        color: Colors.blue,
-                      ),
-                      hintStyle: TextStyle(color: Colors.blue)),
-                ),
+              TextFormField(
+                controller: repassword,
+                obscureText: true,
+                decoration: InputDecoration(
+                    hintText: 'Re-Password',
+                    prefixIcon: Icon(
+                      Icons.lock,
+                      size: 20,
+                      color: Colors.blue,
+                    ),
+                    hintStyle: TextStyle(color: Colors.blue)),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 20),
