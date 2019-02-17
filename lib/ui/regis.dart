@@ -58,20 +58,23 @@ class Regis_PageState extends State<StatefulWidget> {
                       hintStyle: TextStyle(color: Colors.blue)),
                 ),
               ),
-              TextFormField(
-                controller: repassword,
-                obscureText: true,
-                decoration: InputDecoration(
-                    hintText: 'Re-Password',
-                    prefixIcon: Icon(
-                      Icons.lock,
-                      size: 20,
-                      color: Colors.blue,
-                    ),
-                    hintStyle: TextStyle(color: Colors.blue)),
-              ),
               Padding(
-                padding: const EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(bottom: 10),
+                child: TextFormField(
+                  controller: repassword,
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      hintText: 'Confirm password',
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        size: 20,
+                        color: Colors.blue,
+                      ),
+                      hintStyle: TextStyle(color: Colors.blue)),
+                ),
+              ),
+              SizedBox(
+                height: 50,
                 child: RaisedButton(
                   child: Text('CONTINUE'),
                   color: Colors.blue,
